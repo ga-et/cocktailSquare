@@ -1,0 +1,45 @@
+.button-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-margin {
+    margin-bottom: 1em;
+}
+
+.buzzer button {
+    background-color: red;
+    border-radius: 25px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+}
+
+.buzzer button:hover {
+    background-color: brown;
+}
+
+.buzzer {
+    width: 66%;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+button a {
+    width: 100%;
+    display: block;
+    color: whitesmoke;
+}
+
+a {
+    text-decoration: none;
+}

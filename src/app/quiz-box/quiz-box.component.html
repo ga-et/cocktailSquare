@@ -1,0 +1,31 @@
+<h1>{{ questions?.at(0) }}</h1>
+<div class="button-list">
+    <div class="button-margin buzzer">
+        <button (click)="addResponseDoc('1')">
+            <a [routerLink]="['/question/', quizzId+1]">
+                {{questions?.at(1)}}
+            </a>
+        </button>
+    </div>
+    <div class="button-margin buzzer">
+        <button (click)="addResponseDoc('2')">
+            <a [routerLink]="['/question/', quizzId+1]">
+                {{questions?.at(2)}}
+            </a>
+        </button>
+    </div>
+    <div class="button-margin buzzer">
+        <button (click)="addResponseDoc('3')">
+            <a [routerLink]="['/question/', quizzId+1]">
+                {{questions?.at(3)}}
+            </a>
+        </button>
+    </div>
+    <div class="buzzer">
+        <button (click)="addResponseDoc('4')">
+            <a [routerLink]="['/question/', quizzId+1]">
+                {{questions?.at(4)}}
+            </a>
+        </button>
+    </div>
+</div>

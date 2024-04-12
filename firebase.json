@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "cocktail-personality",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

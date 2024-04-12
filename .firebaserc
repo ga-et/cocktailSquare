@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cocktailsquaregame": {
+      "hosting": {
+        "cocktail-personality": [
+          "cocktailsquaregame"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cocktailsquaregame"
+  }
+}

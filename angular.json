@@ -88,6 +88,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "cocktail-personality:build:production",
+              "serveTarget": "cocktail-personality:serve:production"
+            },
+            "development": {
+              "buildTarget": "cocktail-personality:build:development",
+              "serveTarget": "cocktail-personality:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
