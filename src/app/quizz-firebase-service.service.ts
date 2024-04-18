@@ -19,7 +19,7 @@ export class QuizzFirebaseServiceService {
   async saveStringInDoc(docId: string, questionNb: number, reponse: string): Promise<void> {
     const docRef = doc(this.firestore, 'responses', docId);
     await updateDoc(docRef, {
-      ['q'+(questionNb-1)]: reponse,
+      ['q'+(questionNb)]: reponse,
     });
   }
 

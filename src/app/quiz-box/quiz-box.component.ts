@@ -1,7 +1,7 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, Inject, OnInit, inject } from '@angular/core';
 import { QUESTIONS } from './mock-question';
 import { ActivatedRoute } from '@angular/router';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 import { QuizzFirebaseServiceService } from '../quizz-firebase-service.service';
 import { DocumentReference } from '@angular/fire/firestore';
 import { AppComponent } from '../app.component';
@@ -25,6 +25,7 @@ export class QuizBoxComponent {
 
   quizzFireBaseService = inject(QuizzFirebaseServiceService)
   appComponent = inject(AppComponent)
+  router = inject(Router)
 
   constructor() {
     this.quizzId = Number(this.route.snapshot.params['id']);
@@ -32,13 +33,24 @@ export class QuizBoxComponent {
     this.route.params.subscribe( val => {
       this.quizzId =Number(this.route.snapshot.params['id']);
       this.questions = QUESTIONS.get(this.quizzId);
-    }
-
-    )
+    })
   }
 
   addResponseDoc(reponse: string): void {
     this.quizzFireBaseService.saveStringInDoc(this.appComponent.documentId, this.quizzId, reponse);
+    if(this.isLastQuestion()) {
+      this.router.navigate(['result']);
+    } else {
+      this.router.navigate(['/question/', this.quizzId+1])
+    }
+  }
+
+  isLastQuestion(): boolean {
+    if(this.quizzId == QUESTIONS.size) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   addResponse(reponse: string): void {
