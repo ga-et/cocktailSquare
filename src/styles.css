@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Perso";
+    src: url('assets/fonnts.com-Congenial_Black.otf');
+}
+
 html {
     height: 100%;
 }
