@@ -7,12 +7,12 @@ const routeConfig: Routes = [
     {
       path: '',
       component: WelcomeComponent,
-      title: 'Home page'
+      title: 'Welcome !'
     },
     {
       path: 'question/:id',
       component: QuizBoxComponent,
-      title: 'Home details'
+      title: 'questions'
     },
     {
       path: 'result',
